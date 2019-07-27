@@ -1,0 +1,12 @@
+//Используется для инкапсуляции кода
+var myModule = (function(){
+    var memes = ['cats', 'dogs'];
+
+    var getMemes = function(){
+        return memes;
+    };
+
+    return {
+        getMemes
+    }
+})();
