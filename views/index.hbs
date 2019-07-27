@@ -16,5 +16,17 @@
 
 {{createFileList files}}
 
+<button id="delete_btn">Delete all</button>
+
+<script>
+    document.getElementById('delete_btn').addEventListener("click", (e) => {
+        e.preventDefault();
+
+        let req = new XMLHttpRequest();
+        req.open("DELETE", "http://localhost:5000/deleteAll", true);
+        req.send();
+    })
+</script>
+
 </body>
 </html>
